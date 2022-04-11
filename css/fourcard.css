@@ -1,0 +1,124 @@
+/* Start Global Variables */
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+/* End Global Variables */
+/* Start Global Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    Font-size: 15px;
+    background-color: var(--Very-Light-Gray);
+}
+/* End Global Rules */
+/* Start Contents */
+.container{
+    text-align: center;
+    padding: 60px 30px;
+}
+.container h1{
+    color: var(--Very-Dark-Blue);
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 36px;
+}
+@media (max-width:375px) {
+    .container h1{
+        font-size: 24px;
+    }
+}
+.container .normal{
+    font-weight: 200;
+}
+.container .bold{
+    font-weight: 600;
+}
+.container .main-paragraph{
+    width: 500px;
+    margin: 15px auto 60px;
+    color: var(--Grayish-Blue);
+}
+@media (max-width:375px) {
+    .container .main-paragraph{
+        width: 100%;
+    }
+}
+.container .contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+@media (max-width:375px) {
+    .container .contents{
+        flex-direction: column;
+    }
+}
+.container .contents .two-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.container .contents .card{
+    background-color: #ffffff;
+    width: 340px;
+    padding: 30px;
+    text-align: start;
+    box-shadow: hsla(234, 12%, 34%, 0.30) 0px 7px 29px 0px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+@media (max-width:375px) {
+    .container .contents .card{
+        width: 100%;
+    }
+}
+.container .contents .card::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+}
+.container .contents .card.cyan::before{
+    background-color: var(--Cyan);
+}
+.container .contents .card.red::before{
+    background-color: var(--Red);
+}
+.container .contents .card.orange::before{
+    background-color: var(--Orange);
+}
+.container .contents .card.blue::before{
+    background-color: var(--Blue);
+}
+.container .contents .card h3{
+    color: var(--Very-Dark-Blue);
+}
+.container .contents .card p{
+    color: var(--Grayish-Blue);
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.container .contents .card .icon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 40px;
+}
+/* End Contents */
